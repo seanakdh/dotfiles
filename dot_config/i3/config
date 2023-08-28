@@ -222,6 +222,7 @@ for_window [class="VirtualBox"] move to workspace $ws10
 for_window [class="copyq"] floating enable
 for_window [class="1Password"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Gscreenshot"] floating enable
 
 # move to middle of screen
 for_window [class="copyq"] move position center
