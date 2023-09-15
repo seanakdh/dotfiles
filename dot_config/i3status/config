@@ -35,13 +35,6 @@ battery all {
         format = "%status %percentage %remaining"
 }
 
-disk "/" {
-        format = "/: %avail"
-}
-
-disk "/home" {
-        format = "/home: %avail"
-}
 
 load {
         format = "CPU :%1min"
