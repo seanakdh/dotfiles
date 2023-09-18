@@ -43,7 +43,7 @@ exec --no-startup-id tuxedo-control-center --tray
 # start udiskie
 exec udiskie --notify --tray
 
-#start clipmenud
+#start copyq
 exec copyq
 
 # Use pactl to adjust volume in PulseAudio.
@@ -131,7 +131,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Terminal"
-set $ws2 "2: Firefox"
+set $ws2 "2: LibreWolf"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -215,7 +215,7 @@ bindsym $mod+q exec i3lock --color 000000
 bindsym $mod+v exec copyq toggle
 
 # assign programs to worksapces
-for_window [class="firefox"] move to workspace $ws2
+for_window [class="LibreWolf"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws8
 for_window [class="thunderbird"] move to workspace $ws9
 for_window [class="VirtualBox"] move to workspace $ws10
@@ -233,4 +233,7 @@ for_window [class="1Password"] move position center
 # Window Compositor
 exec_always picom --no-fading-openclose 
 
-
+#Startup default Applications
+exec LibreWolf
+exec spotify
+exec thunderbird
