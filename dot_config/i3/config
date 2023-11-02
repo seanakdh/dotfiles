@@ -34,9 +34,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color 0
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Force autorandr to apply detected profile on startup
-# Isn't automatically executed when starting from tty
-exec --no-startup-id autorandr -c
+# start Printer applet
+exec --no-startup-id system-config-printer-applet
+
+# Force autorandr to apply detected profile
+exec_always --no-startup-id autorandr -c
+
+# enable HDMI output if connected
+exec_always --no-startup-id xrandr --output HDMI-1 --right-of eDP-1 --auto
 
 exec --no-startup-id tuxedo-control-center --tray
 
@@ -212,7 +217,6 @@ bar {
 
 # set swissgerman layout because default is US 
 exec_always setxkbmap ch
-exec_always --no-startup-id xrandr --output HDMI-1 --right-of eDP-1 --auto
 
 # i3lock
 bindsym $mod+q exec i3lock --color 000000
