@@ -1,0 +1,41 @@
+Arch Linux install dependencies:
+#OS
+base base-devel linux linux-firmware linux-headers
+
+#bootloader
+grub efinootmgr
+
+#X11
+xorg xorg-xinit
+
+#intel cpu firmware
+intel-media-driver intel-ucode mesa vulkan-intel
+
+#windowmanager
+i3wm i3status i3lock xss-lock dmenu autorandr picom
+
+#system functionality
+brightnessctl networkmanager pulseaudio bolt copyq feh dunst
+	#AUR
+	tuxedo-control-center-bin tuxedo-keyboard-dkms tuxedo-keyboard-ite-dkms
+
+#system usability 
+htop thunar network-manager-applet pavucontrol reflector man-db terminator lxappearance gvfs ksnip chezmoi xdg-utils
+	#AUR
+	yay
+
+# usb and automounting
+udisks2 udiskie  
+
+# printing
+cups system-config-printer hplip
+
+# scanning
+sane skanlite
+
+#applications
+neovim firefox neofetch htop virtualbox 
+	#AUR
+	1password vscodium
+
+
