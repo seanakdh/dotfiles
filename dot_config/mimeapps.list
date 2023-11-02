@@ -1,0 +1,25 @@
+[Default Applications]
+application/octet-stream=codium.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-3S76A2.desktop
+message/rfc822=userapp-Thunderbird-3S76A2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-3S76A2.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-TMZ7A2.desktop
+text/calendar=userapp-Thunderbird-TMZ7A2.desktop
+application/x-extension-ics=userapp-Thunderbird-TMZ7A2.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-TMZ7A2.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+application/pdf=firefox.desktop
+image/png=feh.desktop
+image/jpg=feh.desktop
+
+[Added Associations]
+application/octet-stream=codium.desktop;
+text/plain=codium.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-3S76A2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-3S76A2.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-TMZ7A2.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-TMZ7A2.desktop;
