@@ -1,8 +1,9 @@
 [global_config]
 [keybindings]
+  help = dead_circumflex
 [profiles]
   [[default]]
-    font = Source Code Pro 14
+    font = SpaceMono Nerd Font 14
     foreground_color = "#ffffff"
     use_system_font = False
 [layouts]

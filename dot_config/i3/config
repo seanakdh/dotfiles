@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 14
+font pango:SpaceMono Nerd Font 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -37,13 +37,12 @@ exec --no-startup-id nm-applet
 # start Printer applet
 exec --no-startup-id system-config-printer-applet
 
-# Force autorandr to apply detected profile
-exec_always --no-startup-id autorandr -c
-
 # enable HDMI output if connected
 exec_always --no-startup-id xrandr --output HDMI-1 --right-of eDP-1 --auto
 
 exec --no-startup-id tuxedo-control-center --tray
+
+exec --no-startup-id nextcloud --background
 
 # start udiskie
 exec udiskie --notify --tray
@@ -67,7 +66,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+#tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -224,6 +223,9 @@ bindsym $mod+q exec i3lock --color 000000
 # clipmenu 
 bindsym $mod+v exec copyq toggle
 
+# screenshot
+bindsym $mod+Shift+s exec ksnip -r
+
 # assign programs to worksapces
 for_window [class="firefox"] move to workspace $ws2
 for_window [class="Spotify"] move to workspace $ws8
@@ -242,6 +244,9 @@ for_window [class="1Password"] move position center
 
 # Window Compositor
 exec_always picom --no-fading-openclose 
+
+# Force autorandr to apply detected profile
+exec_always --no-startup-id autorandr -c
 
 #Startup default Applications
 exec thunderbird
