@@ -48,10 +48,10 @@ exec --no-startup-id tuxedo-control-center --tray
 exec --no-startup-id nextcloud --background
 
 # start udiskie
-exec udiskie --notify --tray
+exec --no-startup-id udiskie --notify --tray
 
 #start copyq
-exec copyq
+exec --no-startup-id copyq
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -77,8 +77,14 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# ask for shut down
+bindsym $mod+Shift+x exec prompt "Do you want to shutdown?" "systemctl poweroff"
+
+
+bindsym $mod+Shift+n exec nvim 
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -i -l 10 -p "Run:"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -218,7 +224,7 @@ bar {
 }
 
 # set swissgerman layout because default is US 
-exec setxkbmap -layout ch -variant "de_nodeadkeys"
+exec_always setxkbmap -layout ch -variant "de_nodeadkeys"
 # i3lock
 bindsym $mod+q exec i3lock --color 000000
 
@@ -244,9 +250,7 @@ for_window [class="ksnip"] floating enable
 # move to middle of screen
 for_window [class="copyq"] move position center
 for_window [class="1Password"] move position center
-for_window [class="Blueberry.py"] move position center
 for_window [class="ksnip"] move position center
-
 
 # Window Compositor
 exec_always picom --no-fading-openclose 
@@ -254,5 +258,3 @@ exec_always picom --no-fading-openclose
 # Force autorandr to apply detected profile
 exec_always --no-startup-id autorandr -c --match-edid
 
-#Startup default Applications
-exec thunderbird
