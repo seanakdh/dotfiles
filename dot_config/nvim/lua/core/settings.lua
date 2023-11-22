@@ -1,5 +1,5 @@
 
-vim.opt.langmap = "ü[,¨],ä{,$}"
+vim.opt.langmap = "ü[,¨],ä{,$},ç$"
 
 vim.opt.mouse = 'a'
 vim.opt.relativenumber = true
@@ -11,8 +11,8 @@ vim.opt.smartcase = true
 vim.opt.wrap = true
 vim.opt.breakindent = true
 
-	vim.opt.tabstop = 2
-vim.opt.shiftwidth = 5
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 
 

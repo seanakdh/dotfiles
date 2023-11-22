@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
-vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<cr>')
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree position=current<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>WhichKey<cr>')
 vim.keymap.set('i', 'jj', '<esc>')
 

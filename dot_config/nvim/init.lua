@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({{import = "plugins"}, { import = "themes" }})
 
 -- load color scheme
--- vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "kanagawa"
 
 
 
