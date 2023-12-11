@@ -1,0 +1,17 @@
+#!/bin/sh
+# A dmenu binary promt script.
+# Gives a dmenu promt labeled with $1 to perform $2 
+# For example 
+# './prompt "Do you want to shutdown" "shutdown -h now" 
+
+# Set the command prompt for dmenu
+prompt="Enter sudo command:"
+
+# Use dmenu to get the command from the user
+command=$(echo -e "$prompt" | dmenu -p "$prompt")
+
+# Check if the user entered a command
+if [ -n "$command" ]; then
+    # Run the command with sudo
+    sudo "$command"
+fi

@@ -26,3 +26,4 @@ x-scheme-handler/webcal=userapp-Thunderbird-TMZ7A2.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-TMZ7A2.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=openoffice4-writer.desktop;
 application/x-zerosize=codium.desktop;
+text/markdown=typora.desktop;libreoffice-writer.desktop;

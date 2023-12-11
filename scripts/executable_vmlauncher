@@ -1,0 +1,30 @@
+#!/bin/sh
+# A dmenu binary promt script.
+# Gives a dmenu promt labeled with $1 to perform $2 
+# For example 
+# './promt "Do you want to shutdown" "shutdown -h now" 
+
+# Get the list of VMs and store them in an array
+mapfile -t vms_array < <(vboxmanage list vms | cut -d ' ' -f 1 | sed 's/"//g')
+
+# Use dmenu to select a VM
+selected_vm=$(printf "%s\n" "${vms_array[@]}" | dmenu -i -l 10 -p "Select VM:")
+
+
+
+
+
+
+# Check if a VM was selected
+if [ -n "$selected_vm" ]; then
+
+		fullscreen=$(echo -e "Yes\nNo" | dmenu -i -l 2 -p "Want to launch in Fullscreen?")
+    # Launch the selected VM
+		if [ "$fullscreen" == "Yes"]; then
+    	virtualboxvm --startvm "$selected_vm" --fullscreen
+		else
+			virtualboxvm --startvm "$selected_vm" 
+		fi
+else
+    echo "No VM selected. Exiting..."
+fi

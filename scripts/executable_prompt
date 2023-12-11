@@ -1,0 +1,10 @@
+#!/bin/sh
+# A dmenu binary promt script.
+# Gives a dmenu promt labeled with $1 to perform $2 
+# For example 
+# './prompt "Do you want to shutdown" "shutdown -h now" 
+
+[ $(echo -e "No\nYes" | dmenu -i -l 10 -p "$1") \
+	== "Yes" ] && $2
+
+
